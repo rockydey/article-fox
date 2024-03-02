@@ -100,7 +100,7 @@
       </section>
       <!-- banner section -->
       <section
-        class="mt-14 mb-24 bg-color3 bg-[url('./assets/images/bgbanner.png')] bg-no-repeat bg-bottom bg-cover rounded-[32px]">
+        class="mt-14 bg-color3 bg-[url('./assets/images/bgbanner.png')] bg-no-repeat bg-bottom bg-cover rounded-[32px]">
         <div class="p-4 md:p-[100px]">
           <div class="flex flex-col lg:flex-row justify-between gap-10">
             <div class="space-y-8">
@@ -182,7 +182,32 @@
       </section>
     </header>
     <!-- Main Section -->
-    <main></main>
+    <main class="max-w-screen-xl mx-auto my-24">
+      <!-- let's discuss section -->
+      <section class="">
+        <h3 class="text-4xl font-black text-color3 text-center mb-6">
+          Let’s Discuss
+        </h3>
+        <p class="inter text-lg font-normal text-color4 text-center mb-12">
+          Yes, you can run unit tests and view the results directly within the
+          app. The <span class="inline md:block"></span> integrated testing
+          features allow for a streamlined .
+        </p>
+        <div class="flex gap-6">
+          <div id="all-posts" class="space-y-6 flex-1"></div>
+          <div class="w-96 p-6 bg-[#12132D0D] rounded-3xl">
+            <div class="flex justify-between mb-5">
+              <h4 class="text-xl font-bold text-color3">Title</h4>
+              <p class="text-base font-normal text-color4">
+                <i class="fa-solid fa-check-double text-[#3DCE09]"></i>
+                Mark as read (<span id="update-marked-value">0</span>)
+              </p>
+            </div>
+            <div id="marked-post" class="space-y-5"></div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer Section -->
     <footer></footer>
 
