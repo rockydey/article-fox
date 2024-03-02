@@ -63,7 +63,7 @@ const displayPost = (posts) => {
                       ""
                     )}","${
       post.view_count
-    }")' class="cursor-pointer py-1 px-2 border rounded-full bg-[#10B981] ">
+    }"); pushNotify()' class="cursor-pointer py-1 px-2 border rounded-full bg-[#10B981] ">
                         <i class="fa-solid fa-envelope-open text-white"></i>  
                     </div>
                  </div>
@@ -107,5 +107,19 @@ const toggleLoadingSpinner = (isLoading) => {
     loadingSpinner.classList.add("hidden");
   }
 };
+
+// Toast
+let myNotify;
+function pushNotify() {
+  myNotify = new Notify({
+    status: "success",
+    title: "Successfully Marked",
+    effect: "slide",
+    type: "filled",
+  });
+}
+function close() {
+  myNotify.close();
+}
 
 loadAllPosts();
