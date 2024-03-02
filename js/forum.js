@@ -72,6 +72,7 @@ const displayPost = (posts) => {
     `;
     allPosts.appendChild(div);
   });
+  toggleLoadingSpinner(false);
 };
 
 const handleReadPost = (title, view) => {
@@ -91,10 +92,20 @@ const handleReadPost = (title, view) => {
 const searchPost = document
   .getElementById("search-post")
   .addEventListener("click", () => {
+    toggleLoadingSpinner(true);
     const searchField = document.getElementById("default-search");
     const searchText = searchField.value;
     loadSearch(searchText);
     searchField.value = "";
   });
+
+const toggleLoadingSpinner = (isLoading) => {
+  const loadingSpinner = document.getElementById("loading-spinner");
+  if (isLoading) {
+    loadingSpinner.classList.remove("hidden");
+  } else {
+    loadingSpinner.classList.add("hidden");
+  }
+};
 
 loadAllPosts();
