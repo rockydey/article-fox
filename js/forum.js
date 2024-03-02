@@ -22,7 +22,7 @@ const displayPost = (posts) => {
   posts.forEach((post) => {
     // console.log(post);
     const div = document.createElement("div");
-    div.classList = `flex p-10 gap-6 rounded-3xl bg-[#F3F3F5]`;
+    div.classList = `flex p-4 md:p-10 gap-6 rounded-3xl bg-[#F3F3F5]`;
     div.innerHTML = `
             <div class="relative me-4">
                 <img class="w-16 h-16 rounded-xl" src=${
@@ -36,9 +36,7 @@ const displayPost = (posts) => {
             <div class ="flex-1">
                  <p class="inter text-sm font-medium text-color2 mb-3"><span># ${
                    post.category
-                 }</span> <span class="ml-5">Author: ${
-      post.author.name
-    }</span></p>  
+                 }</span> <span class="ml-0 md:ml-5 block md:inline">Author: ${post.author.name}</span></p>  
                  <h4 class="text-xl font-bold text-color3 mb-4">${
                    post.title
                  }</h4> 
@@ -47,7 +45,7 @@ const displayPost = (posts) => {
                  }</p>  
                  <div class="border-b-2 border-dashed border-[#12132D40] my-5"></div>  
                  <div class="flex justify-between items-center">
-                    <div class="flex gap-6">
+                    <div class="flex flex-wrap md:flex-nowrap gap-6">
                         <p class="inter text-base font-normal"><i class="fa-regular fa-comment"></i> <span class=" text-color2">${
                           post.comment_count
                         }</span></p>
