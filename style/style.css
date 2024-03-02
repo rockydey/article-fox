@@ -16,3 +16,6 @@ body {
 .inter {
   font-family: "Inter", sans-serif;
 }
+.leading-snug {
+  line-height: 86px !important;
+}
