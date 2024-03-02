@@ -67,19 +67,23 @@
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul
                 class="font-medium flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-6 rtl:space-x-reverse md:mt-0 md:border-0 space-y-6 md:space-y-0">
-                <li title="Home"
+                <li
+                  title="Home"
                   class="cursor-pointer py-2 px-[10px] border rounded-full bg-[#12132D08] border-[#0307121A]">
                   <i class="fa-solid fa-house text-xl"></i>
                 </li>
-                <li title="Edit"
+                <li
+                  title="Edit"
                   class="cursor-pointer py-2 px-3 border rounded-full bg-[#12132D08] border-[#0307121A]">
                   <i class="fa-solid fa-pen text-xl"></i>
                 </li>
-                <li title="Add"
+                <li
+                  title="Add"
                   class="cursor-pointer p-2 border rounded-full bg-[#12132D08] border-[#0307121A]">
                   <i class="fa-solid fa-user-plus text-xl"></i>
                 </li>
-                <li  title="Share"
+                <li
+                  title="Share"
                   class="cursor-pointer py-2 px-3 border rounded-full bg-[#12132D08] border-[#0307121A]">
                   <i class="fa-solid fa-flag text-xl"></i>
                 </li>
@@ -93,6 +97,86 @@
             </div>
           </div>
         </nav>
+      </section>
+      <!-- banner section -->
+      <section
+        class="mt-14 mb-24 bg-color3 bg-[url('./assets/images/bgbanner.png')] bg-no-repeat bg-bottom bg-cover rounded-[32px]">
+        <div class="p-4 md:p-[100px]">
+          <div class="flex flex-col lg:flex-row justify-between gap-10">
+            <div class="space-y-8">
+              <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-snug">
+                Welcome to the <span class="inline lg:block"></span>
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-[#797DFC] to-[#797dfc1a]"
+                  >ReTro</span
+                >
+                Forum
+              </h2>
+              <p class="text-xl font-medium text-[#FFFFFFCC]">
+                Share your favorite opinion and win and
+                <span class="inline lg:block"></span> wp forum coffee mug!
+              </p>
+              <form class="lg:max-w-sm">
+                <label
+                  for="default-search"
+                  class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                  >Search</label
+                >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 20">
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                  </div>
+                  <input
+                    type="search"
+                    id="default-search"
+                    class="block w-full rounded-full p-5 ps-10 text-base focus:outline-none"
+                    placeholder="Search here anything"
+                    required />
+                  <button
+                    type="submit"
+                    class="text-white font-bold absolute end-[7px] bottom-[7px] bg-color1 focus:ring-4 focus:outline-none focus:ring-blue-300 text-xl px-6 py-3 dark:bg-color1 dark:focus:ring-color1 rounded-full">
+                    Search
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="bg-white p-12 rounded-[32px] w-full lg:w-[35%] space-y-6 flex flex-col justify-center">
+              <div
+                class="flex justify-between text-2xl font-medium text-color4 ">
+                <p>Registered Users</p>
+                <p>01</p>
+              </div>
+              <div
+                class="flex justify-between text-2xl font-medium text-color4">
+                <p>Forum</p>
+                <p>05</p>
+              </div>
+              <div
+                class="flex justify-between text-2xl font-medium text-color4">
+                <p>Topics</p>
+                <p>07</p>
+              </div>
+              <div
+                class="flex justify-between text-2xl font-medium text-color4">
+                <p>Replies</p>
+                <p>03</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </header>
     <!-- Main Section -->
