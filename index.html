@@ -117,7 +117,7 @@
                 Share your favorite opinion and win and
                 <span class="inline lg:block"></span> wp forum coffee mug!
               </p>
-              <form class="lg:max-w-sm">
+              <div class="lg:max-w-sm">
                 <label
                   for="default-search"
                   class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -141,18 +141,19 @@
                     </svg>
                   </div>
                   <input
-                    type="search"
+                    type="text"
                     id="default-search"
                     class="block w-full rounded-full p-5 ps-10 text-base focus:outline-none"
                     placeholder="Search here anything"
                     required />
-                  <button
+                  <button 
+                  id="search-post"
                     type="submit"
                     class="text-white font-bold absolute end-[7px] bottom-[7px] bg-color1 focus:ring-4 focus:outline-none focus:ring-blue-300 text-xl px-6 py-3 dark:bg-color1 dark:focus:ring-color1 rounded-full">
                     Search
                   </button>
                 </div>
-              </form>
+              </div>
             </div>
             <div
               class="bg-white p-12 rounded-[32px] w-full lg:w-[35%] space-y-6 flex flex-col justify-center">
