@@ -1,4 +1,5 @@
 const loadAllPosts = async () => {
+  toggleLoadingSpinner(true);
   const res = await fetch(
     "https://openapi.programming-hero.com/api/retro-forum/posts"
   );
@@ -127,7 +128,42 @@ const loadLatestPosts = async () => {
     "https://openapi.programming-hero.com/api/retro-forum/latest-posts"
   );
   const data = await res.json();
-  console.log(data);
+  displayLatestPosts(data);
+};
+
+const displayLatestPosts = (posts) => {
+  const latestPosts = document.getElementById("latest-posts");
+  posts.forEach((post) => {
+    // console.log(post);
+    const div = document.createElement("div");
+    div.classList = `bg-white border border-[#12132D26] p-6 rounded-3xl`;
+    div.innerHTML = `
+    <div class="rounded-3xl mb-6">
+      <img class="rounded-3xl" src=${post.cover_image} alt="" />
+    </div>
+    <div class="space-y-3">
+      <p class='text-base font-normal text-color4'><i class="fa-regular fa-calendar-check"></i> <span class="ml-2">${
+        post.author?.posted_date ? post.author?.posted_date : "No publish date"
+      }</span></p>
+      <h3 class='text-lg font-bold text-color3'>${post.title}</h3>
+      <p class="text-base text-color4 font-normal">${post.description}</p>
+      <div class="flex item-center gap-4">
+        <div>
+          <img class="w-14 h-14 rounded-full" src=${
+            post.profile_image
+          } alt="" />
+        </div>
+        <div class="space-y-1">
+          <h4 class="text-base font-bold text-color3">${post.author.name}</h4>
+          <p class="text-base font-normal text-color4">${
+            post.author?.designation ? post.author?.designation : "Unknown"
+          }</p>
+        </div>
+      </div>
+    </div>
+  `;
+    latestPosts.appendChild(div);
+  });
 };
 
 loadAllPosts();
