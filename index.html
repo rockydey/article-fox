@@ -72,22 +72,22 @@
               <ul
                 class="font-medium flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-6 rtl:space-x-reverse md:mt-0 md:border-0 space-y-6 md:space-y-0">
                 <li
-                  title="Home"
+                  data-tooltip-target="tooltip-animation1"
                   class="cursor-pointer py-2 px-[10px] border rounded-full bg-[#12132D08] border-[#0307121A]">
                   <i class="fa-solid fa-house text-xl"></i>
                 </li>
                 <li
-                  title="Edit"
+                  data-tooltip-target="tooltip-animation2"
                   class="cursor-pointer py-2 px-3 border rounded-full bg-[#12132D08] border-[#0307121A]">
                   <i class="fa-solid fa-pen text-xl"></i>
                 </li>
                 <li
-                  title="Add"
+                  data-tooltip-target="tooltip-animation3"
                   class="cursor-pointer p-2 border rounded-full bg-[#12132D08] border-[#0307121A]">
                   <i class="fa-solid fa-user-plus text-xl"></i>
                 </li>
                 <li
-                  title="Share"
+                  data-tooltip-target="tooltip-animation4"
                   class="cursor-pointer py-2 px-3 border rounded-full bg-[#12132D08] border-[#0307121A]">
                   <i class="fa-solid fa-flag text-xl"></i>
                 </li>
@@ -185,6 +185,36 @@
           </div>
         </div>
       </section>
+
+      <!-- tooltip -->
+      <div
+        id="tooltip-animation1"
+        role="tooltip"
+        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-color3 rounded-lg shadow-sm opacity-0 tooltip dark:bg-color3">
+        Home
+        <div class="tooltip-arrow" data-popper-arrow></div>
+      </div>
+      <div
+        id="tooltip-animation2"
+        role="tooltip"
+        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-color3 rounded-lg shadow-sm opacity-0 tooltip dark:bg-color3">
+        Edit
+        <div class="tooltip-arrow" data-popper-arrow></div>
+      </div>
+      <div
+        id="tooltip-animation3"
+        role="tooltip"
+        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-color3 rounded-lg shadow-sm opacity-0 tooltip dark:bg-color3">
+        Add
+        <div class="tooltip-arrow" data-popper-arrow></div>
+      </div>
+      <div
+        id="tooltip-animation4"
+        role="tooltip"
+        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-color3 rounded-lg shadow-sm opacity-0 tooltip dark:bg-color3">
+        Share
+        <div class="tooltip-arrow" data-popper-arrow></div>
+      </div>
     </header>
     <!-- Main Section -->
     <main class="max-w-screen-xl mx-auto my-24">
