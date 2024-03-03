@@ -57,7 +57,7 @@ const displayPost = (posts) => {
                         }</span></p>
                         <p class="inter text-base font-normal text-color2"><i class="fa-regular fa-clock"></i> <span class=" text-color2">${
                           post.posted_time
-                        }</span></p>
+                        } min</span></p>
                     </div>
                     <div onclick='handleReadPost("${post.title.replace(
                       "'",
