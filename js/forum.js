@@ -95,8 +95,19 @@ const searchPost = document
   .addEventListener("click", () => {
     toggleLoadingSpinner(true);
     const searchField = document.getElementById("default-search");
-    const searchText = searchField.value;
-    loadSearch(searchText);
+    const searchText = searchField.value.toLowerCase();
+    const allPosts = document.getElementById("all-posts");
+    if (
+      searchText === "coding" ||
+      searchText === "comedy" ||
+      searchText === "music"
+    ) {
+      allPosts.innerHTML = "";
+      loadSearch(searchText);
+    } else {
+      pushNotify2();
+      toggleLoadingSpinner(false);
+    }
     searchField.value = "";
   });
 
@@ -115,6 +126,14 @@ function pushNotify() {
   myNotify = new Notify({
     status: "success",
     title: "Successfully Marked",
+    effect: "slide",
+    type: "filled",
+  });
+}
+function pushNotify2() {
+  myNotify = new Notify({
+    status: "error",
+    title: "Please, provide valid category name!",
     effect: "slide",
     type: "filled",
   });
