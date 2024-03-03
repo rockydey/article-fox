@@ -48,7 +48,7 @@ const displayPost = (posts) => {
                  }</p>  
                  <div class="border-b-2 border-dashed border-[#12132D40] my-5"></div>  
                  <div class="flex justify-between items-center">
-                    <div class="flex flex-wrap md:flex-nowrap gap-6">
+                    <div class="flex flex-wrap md:flex-nowrap gap-3 md:gap-6">
                         <p class="inter text-base font-normal"><i class="fa-regular fa-comment"></i> <span class=" text-color2">${
                           post.comment_count
                         }</span></p>
