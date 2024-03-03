@@ -36,7 +36,9 @@ const displayPost = (posts) => {
             <div class ="flex-1">
                  <p class="inter text-sm font-medium text-color2 mb-3"><span># ${
                    post.category
-                 }</span> <span class="ml-0 md:ml-5 block md:inline">Author: ${post.author.name}</span></p>  
+                 }</span> <span class="ml-0 md:ml-5 block md:inline">Author: ${
+      post.author.name
+    }</span></p>  
                  <h4 class="text-xl font-bold text-color3 mb-4">${
                    post.title
                  }</h4> 
@@ -120,4 +122,14 @@ function close() {
   myNotify.close();
 }
 
+const loadLatestPosts = async () => {
+  const res = await fetch(
+    "https://openapi.programming-hero.com/api/retro-forum/latest-posts"
+  );
+  const data = await res.json();
+  console.log(data);
+};
+
 loadAllPosts();
+
+loadLatestPosts();
